@@ -1,4 +1,4 @@
-import './TowerFire.css'
+// import './TowerFire.css'
 import {TowerFactory} from 'components'
 import {TowerFactoryInterface} from 'interfaces'
 import {TowerEntity} from 'entities'

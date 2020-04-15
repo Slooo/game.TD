@@ -8,13 +8,13 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: ['.ts', '.js'],
     alias: {
-      "entities": path.resolve(__dirname, "src/entities"),
-      "types": path.resolve(__dirname, "src/types"),
-      "interfaces": path.resolve(__dirname, "src/interfaces"),
-      "components": path.resolve(__dirname, "src/components"),
-      "UI": path.resolve(__dirname, "src/UI"),
+      'entities': path.resolve(__dirname, 'src/entities'),
+      'types': path.resolve(__dirname, 'src/types'),
+      'interfaces': path.resolve(__dirname, 'src/interfaces'),
+      'components': path.resolve(__dirname, 'src/components'),
+      'UI': path.resolve(__dirname, 'src/UI'),
     }
   },
   module: {

@@ -1,2 +1,2 @@
-export * from './towers/TowerFire'
+export {TowerFire} from './towers/TowerFire'
 export * from './towers/TowerAqua'

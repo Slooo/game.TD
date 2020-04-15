@@ -27,6 +27,7 @@ export class Grid {
 
 		const area = document.createElement('div')
 		area.classList.add('area')
+		let i = 0
 		this.map.forEach((cY, yI) => {
 			const y = document.createElement('div')
 			y.setAttribute('id', `areaY${yI}`)
@@ -37,12 +38,17 @@ export class Grid {
 				// TODO: перенести ?
 				x.style.width = x.style.height = `${this.box}px`
 
-				x.setAttribute('id', `areaX${xI}`)
+				x.setAttribute('id', `areaX${i}`)
 				x.classList.add('areaX', cX ? 'areaOpen' : 'areaClose')
 				y.append(x)
+				i++
 			})
 		})
 
 		return area
+	}
+
+	click() {
+
 	}
 }

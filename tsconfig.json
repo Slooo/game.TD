@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "outDir": "./dist/",
     "noImplicitAny": true,
     "sourceMap": true,
     "module": "commonjs",
     "target": "es5",
     "paths": {
-      "entities": ["src/entities"],
-      "types": ["src/types"],
-      "interfaces": ["src/interfaces"],
-      "components": ["src/components"],
-      "UI": ["src/UI"]
+      "@src/*": ["src/*"],
+      "entities": ["./src/entities"],
+      "types": ["./src/types"],
+      "interfaces": ["./src/interfaces"],
+      "components": ["./src/components"],
+      "UI": ["./src/UI"]
     }
   }
 }
