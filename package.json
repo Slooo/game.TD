@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "dependencies": {},
   "devDependencies": {
+    "@olavoparno/jest-badges-readme": "^1.4.1",
     "@types/jest": "^25.2.1",
     "css-loader": "^3.4.2",
     "jest": "^25.2.7",
@@ -23,13 +24,25 @@
     "build": "webpack",
     "start": "webpack-dev-server --open",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "prebuild": "echo false > .buildstatus",
+    "postbuild": "echo true > .buildstatus",
+    "make-badges": "node_modules/.bin/jest-badges-readme",
+    "make-readme": "npm run test:coverage && npm run make-badges"
   },
   "jest": {
     "verbose": true,
     "bail": true,
-    "collectCoverage": false,
-    "collectCoverageFrom" : ["**/*.{js,jsx}", "!**/node_modules/**"],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**"
+    ],
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ],
     "preset": "ts-jest",
     "testEnvironment": "jsdom",
     "moduleNameMapper": {
